@@ -6,6 +6,7 @@ import com.example.cafeorderingsystem.entity.Orders;
 import com.example.cafeorderingsystem.service.MenuService;
 import com.example.cafeorderingsystem.service.OrderHistoryService;
 import com.example.cafeorderingsystem.service.OrderService;
+import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -25,6 +26,7 @@ public class ConsoleUI {
 
     private OrderHistoryService orderHistoryService;
 
+    @PostConstruct
     public void start() {
         Scanner scanner = new Scanner(System.in);
 
